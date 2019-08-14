@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "建造者模式", "建造�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "原型模式", "原型模式\原型模式.csproj", "{1B2F5D9B-8E0C-405D-96CE-2975A7FFB9CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "适配器模式", "适配器模式\适配器模式.csproj", "{5EDA324F-31B4-4E05-AFF6-9DD341730676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "适配器模式", "适配器模式\适配器模式.csproj", "{5EDA324F-31B4-4E05-AFF6-9DD341730676}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "桥接模式", "桥接模式\桥接模式.csproj", "{3E5067C6-D443-4D33-9612-D0DD521F14C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "桥接模式", "桥接模式\桥接模式.csproj", "{3E5067C6-D443-4D33-9612-D0DD521F14C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "装饰器模式", "装饰器模式\装饰器模式.csproj", "{EDB8E907-A8EA-4EC0-8028-C7D1516CA852}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{3E5067C6-D443-4D33-9612-D0DD521F14C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E5067C6-D443-4D33-9612-D0DD521F14C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E5067C6-D443-4D33-9612-D0DD521F14C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB8E907-A8EA-4EC0-8028-C7D1516CA852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB8E907-A8EA-4EC0-8028-C7D1516CA852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB8E907-A8EA-4EC0-8028-C7D1516CA852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB8E907-A8EA-4EC0-8028-C7D1516CA852}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

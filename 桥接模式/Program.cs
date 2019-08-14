@@ -59,7 +59,7 @@ namespace 桥接模式
 
     public class RemoteControl
     {
-        public  TV Implement {  get; set; }
+        public TV Implement { get; set; }
 
         public virtual void On()
         {
@@ -99,12 +99,12 @@ namespace 桥接模式
     {
         static void Main(string[] args)
         {
-          RemoteControl remoteControl = new XiaoMiRemoteControl();
-          remoteControl.Implement = new XiaoMiTV();
-          remoteControl.VolumeRemote();
-          remoteControl.On();
-          remoteControl.TuneChannel();
-          remoteControl.Off();
+            RemoteControl remoteControl = new XiaoMiRemoteControl();
+            remoteControl.Implement = new XiaoMiTV();
+            remoteControl.VolumeRemote();
+            remoteControl.On();
+            remoteControl.TuneChannel();
+            remoteControl.Off();
 
 
 
