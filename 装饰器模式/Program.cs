@@ -17,19 +17,16 @@ namespace 装饰器模式
 
     public abstract class Decorator : Phone
     {
-        private Phone phone;
+        private readonly Phone phone;
 
-        public Decorator(Phone p)
+        protected Decorator(Phone p)
         {
             phone = p;
         }
 
         public override void Print()
         {
-            if (phone != null)
-            {
-                phone.Print();
-            }
+            phone?.Print();
         }
     }
 
