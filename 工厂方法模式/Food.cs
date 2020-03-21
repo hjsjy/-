@@ -4,6 +4,9 @@ using System.Text;
 
 namespace 工厂方法模式
 {
+    /// <summary>
+    /// 1
+    /// </summary>
     public abstract class Food
     {
         public abstract void Print();
