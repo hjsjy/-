@@ -52,8 +52,7 @@ namespace 观察者模式
 
         public void GiveYouMoney(object sender)
         {
-            var subscription = sender as Subscription;
-            if (subscription != null)
+            if (sender is Subscription subscription)
             {
 
                 Console.WriteLine(subscription.Duration + subscription.Name + SubscriberName);
