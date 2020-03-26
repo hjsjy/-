@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace 观察者模式
 {
 
     public abstract class Subscription
     {
-        private  List<IObserver> Observers = new List<IObserver>();
+        public delegate void NotifyHandler(object sender);
+
+        public NotifyHandler notify;
         public string Name { get; set; }
 
         public double Duration { get; set; }
@@ -17,17 +18,19 @@ namespace 观察者模式
             Duration = duration;
         }
 
-        public void AddObserver(IObserver observer)
+        public void AddObserver(NotifyHandler ob)
         {
-            Observers.Add(observer);
+            notify += ob;
+        }
+
+        public void RemoveObserver(NotifyHandler ob)
+        {
+            notify -= ob;
         }
 
         public void Update()
         {
-            foreach (var observer in Observers)
-            {
-                observer.GiveYouMoney(this);
-            }
+            notify?.Invoke(this);
         }
     }
 
@@ -38,14 +41,7 @@ namespace 观察者模式
         }
     }
 
-    public interface IObserver
-    {
-
-
-        public void GiveYouMoney(Subscription subscription);
-    }
-
-    public class Subscriber : IObserver
+    public class Subscriber
     {
         public string SubscriberName { get; set; }
 
@@ -53,22 +49,32 @@ namespace 观察者模式
         {
             SubscriberName = name;
         }
-        public void GiveYouMoney(Subscription subscription)
+
+        public void GiveYouMoney(object sender)
         {
-            Console.WriteLine(subscription.Duration + subscription.Name + SubscriberName);
+            var subscription = sender as Subscription;
+            if (subscription != null)
+            {
+
+                Console.WriteLine(subscription.Duration + subscription.Name + SubscriberName);
+            }
+
         }
+
+
     }
 
     public class Client
     {
-  
+
 
         public static void Main(string[] args)
         {
-            Subscription subscription1 = new NarojaySubscription("narojayhome", 2);
             Subscription subscription2 = new NarojaySubscription("narojayhome", 2);
-            subscription2.AddObserver(new Subscriber("narojay1"));
-            subscription2.AddObserver(new Subscriber("narojay2"));
+            var subscriber1 = new Subscriber("test1");
+            var subscriber2 = new Subscriber("test2");
+            subscription2.AddObserver(subscriber1.GiveYouMoney);
+            subscription2.AddObserver(subscriber2.GiveYouMoney);
             subscription2.Update();
         }
     }
