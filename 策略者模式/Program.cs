@@ -3,7 +3,7 @@
 namespace 策略者模式
 {
     /// <summary>
-    /// 1
+    /// 11
     /// </summary>
     public interface IStrategy
     {
