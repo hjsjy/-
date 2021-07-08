@@ -35,11 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "命令模式", "命令模�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "观察者模式", "观察者模式\观察者模式.csproj", "{CB5BDF83-4584-4391-8574-D57904AE4400}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "状态者模式", "状态者模式\状态者模式.csproj", "{F07CC8A9-9430-41DC-80D7-12B4D65988FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "状态者模式", "状态者模式\状态者模式.csproj", "{F07CC8A9-9430-41DC-80D7-12B4D65988FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "策略者模式", "策略者模式\策略者模式.csproj", "{65F4EE3B-295C-4E4E-805E-B0B9D2E05EE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "策略者模式", "策略者模式\策略者模式.csproj", "{65F4EE3B-295C-4E4E-805E-B0B9D2E05EE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "责任链模式", "责任链模式\责任链模式.csproj", "{C47CBF12-528E-4BDC-988A-02A532C2C34C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "责任链模式", "责任链模式\责任链模式.csproj", "{C47CBF12-528E-4BDC-988A-02A532C2C34C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "访问者模式", "访问者模式\访问者模式.csproj", "{EBE0C87D-4362-45D9-8F6F-7B3855002A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{C47CBF12-528E-4BDC-988A-02A532C2C34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C47CBF12-528E-4BDC-988A-02A532C2C34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C47CBF12-528E-4BDC-988A-02A532C2C34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE0C87D-4362-45D9-8F6F-7B3855002A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE0C87D-4362-45D9-8F6F-7B3855002A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE0C87D-4362-45D9-8F6F-7B3855002A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE0C87D-4362-45D9-8F6F-7B3855002A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
