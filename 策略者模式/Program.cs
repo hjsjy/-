@@ -2,6 +2,9 @@
 
 namespace 策略者模式
 {
+    /// <summary>
+    /// 1
+    /// </summary>
     public interface IStrategy
     {
         void Calculate(int money);
