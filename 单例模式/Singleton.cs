@@ -3,7 +3,7 @@
 namespace 单例模式
 {
     /// <summary>
-    /// tes
+    /// tes11
     /// </summary>
     public class Singleton
     {
