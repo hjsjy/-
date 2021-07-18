@@ -5,25 +5,24 @@ namespace 观察者模式
 
     public abstract class Subscription
     {
-        public delegate void NotifyHandler(object sender);
 
-        public NotifyHandler notify;
+        public Action<object>  notify;
         public string Name { get; set; }
 
         public double Duration { get; set; }
 
-        public Subscription(string name, double duration)
+        protected Subscription(string name, double duration)
         {
             Name = name;
             Duration = duration;
         }
 
-        public void AddObserver(NotifyHandler ob)
+        public void AddObserver(Action<object> ob)
         {
             notify += ob;
         }
 
-        public void RemoveObserver(NotifyHandler ob)
+        public void RemoveObserver(Action<object> ob)
         {
             notify -= ob;
         }
@@ -59,14 +58,10 @@ namespace 观察者模式
             }
 
         }
-
-
     }
 
     public class Client
     {
-
-
         public static void Main(string[] args)
         {
             Subscription subscription2 = new NarojaySubscription("narojayhome", 2);
